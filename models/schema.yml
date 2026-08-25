@@ -1,0 +1,56 @@
+models:
+  - name: route_reliability
+    description: "Average lateness per bus route, ranked."
+    columns:
+      - name: route_name
+        description: "The name of the bus or rail route."
+        tests:
+          - not_null
+          - unique
+      - name: avg_minutes_late
+        description: "Average minutes late for this route."
+        tests:
+          - not_null
+      - name: num_arrivals
+        description: "How many arrivals this average is based on."
+        tests:
+          - not_null
+
+  - name: hourly_reliability
+    description: "Average lateness grouped by hour of day (Minneapolis time)."
+    columns:
+      - name: hour
+        description: "Hour of the day, 0 to 23."
+        tests:
+          - not_null
+          - unique
+      - name: avg_minutes_late
+        description: "Average minutes late in this hour."
+        tests:
+          - not_null
+      - name: num_arrivals
+        description: "How many arrivals this hour's average is based on."
+        tests:
+          - not_null
+
+  - name: daily_reliability
+    description: "Average lateness grouped by day of the week."
+    columns:
+      - name: day_name
+        description: "Day of the week, like Monday."
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+              arguments:
+                values: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+      - name: avg_minutes_late
+        description: "Average minutes late on this day."
+        tests:
+          - not_null
+
+      - name: num_arrivals
+        description: "How many arrivals this day's average is based on."
+        tests:
+          - not_null

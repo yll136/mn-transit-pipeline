@@ -1,0 +1,7 @@
+*.zip
+*.crdownload
+.venv/
+__pycache__/
+*.json
+raw/
+*.duckdb
