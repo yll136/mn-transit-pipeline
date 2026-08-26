@@ -79,7 +79,7 @@ appends the clean records to BigQuery. Dagster runs the collector on a
 schedule. Two source types are handled: a live JSON API (vehicle positions)
 and a bulk file download (the GTFS schedule as CSVs).
 
-### 2. Transform (dbt on BigQuery), the hard part
+### 2. Transform (dbt on BigQuery)
 The dbt project is layered into staging, intermediate, and marts:
 
 - Staging (stg_): one model per source, cleans and standardizes types once
