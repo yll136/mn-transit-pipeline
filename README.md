@@ -24,19 +24,6 @@ project, and served through an interactive dashboard.
 
 ---
 
-## Why this project
-
-Most portfolio pipelines run on static or AI generated CSV files. This one
-runs on real, live data, and solves a genuinely non trivial problem:
-inferring when a bus actually arrived at a stop from nothing but raw GPS
-coordinates streaming in over time. That required geospatial distance math,
-careful stop matching logic, window functions, and timezone aware time
-arithmetic. It is the same messy reality a real data engineering role
-involves: live data that changes, fails, or lies to you, incremental
-loading, orchestration, and transformation at scale.
-
----
-
 ## Architecture
 
 ```
