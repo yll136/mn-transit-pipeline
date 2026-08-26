@@ -22,6 +22,8 @@ project, and served through an interactive dashboard.
 
 *Interactive Looker Studio dashboard reading from BigQuery.*
 
+**[View the live dashboard →](https://datastudio.google.com/s/s_ccNwn3i6A)**
+
 ---
 
 ## Architecture
