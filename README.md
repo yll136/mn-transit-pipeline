@@ -69,7 +69,7 @@ into the final marts.*
 
 The live data never says "the bus arrived at stop X." It only reports where
 each vehicle is (latitude and longitude) at each moment. Turning that into
-"was this bus on time?" is the core engineering challenge.
+"was this bus on time?" is the core challenge of this project.
 
 ### 1. Extract and Load (Python + Dagster)
 A Python collector calls Metro Transit's live vehicle API, filters out non
